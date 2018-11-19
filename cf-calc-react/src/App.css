@@ -1,0 +1,28 @@
+.arrows {
+    width: 7%;
+    height: 5%;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.input-box {
+    text-align: center;
+    background-color: antiquewhite;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    font-size: 350%;
+    font-family: serif;
+}
+
+.ten-pines-logo {
+    position: absolute;
+    bottom: 0px;
+    width: 10%;
+}
