@@ -20,11 +20,11 @@ export class TemperatureCalculator extends React.Component {
     return rounded.toString();
   };
 
-  aCelsius = (fahrenheit) => {
+  toCelsius = (fahrenheit) => {
     return ( fahrenheit - 32 ) * 5 / 9;
   };
 
-  aFahrenheit = (celsius) => {
+  toFahrenheit = (celsius) => {
     return ( celsius * 9 / 5 ) + 32;
   };
 
@@ -39,8 +39,8 @@ export class TemperatureCalculator extends React.Component {
   render() {
     const scale = this.state.scale;
     const temperature = this.state.temperature;
-    const celsius = scale === 'f' ? this.tryConvert(temperature, this.aCelsius) : temperature;
-    const fahrenheit = scale === 'c' ? this.tryConvert(temperature, this.aFahrenheit) : temperature;
+    const celsius = scale === 'f' ? this.tryConvert(temperature, this.toCelsius) : temperature;
+    const fahrenheit = scale === 'c' ? this.tryConvert(temperature, this.toFahrenheit) : temperature;
 
     return (
       <div>

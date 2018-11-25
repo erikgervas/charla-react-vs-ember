@@ -1,5 +1,4 @@
-<fieldset>
-  <legend>Enter temperature in CELSIUS:</legend>
-  <input value={ 1 }
-         onChange={null}/>
+<fieldset class="input-box">
+  <legend>Enter temperature in {{scale}}:</legend>
+  {{input value=temperature input=(action onTemperatureChange value="target.value") }}
 </fieldset>

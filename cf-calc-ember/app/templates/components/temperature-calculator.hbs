@@ -1,3 +1,8 @@
-<h1>Temperature Calculator</h1>
-{{temperature-input}}
-{{temperature-input}}
+<div>
+  <h1 class="title">Temperature Calculator</h1>
+  <div class="calculator">
+    {{temperature-input scale='c' temperature=celsius onTemperatureChange=(action 'handleCelsiusChange')}}
+    <img src="assets/images/bidirectional-arrows-black-fat.png" class="arrows" alt="arrows"/>
+    {{temperature-input scale='f' temperature=fahrenheit onTemperatureChange=(action 'handleFahrenheitChange')}}
+  </div>
+</div>
