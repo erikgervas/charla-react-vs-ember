@@ -1,5 +1,5 @@
 .arrows {
-  width: 7%;
+  width: 5%;
   height: 5%;
 }
 
@@ -18,8 +18,8 @@
 .title {
   display: flex;
   justify-content: center;
-  font-size: 350%;
-  font-family: serif;
+  font-size: 500%;
+  font-family: 'Shadows Into Light', cursive;
 }
 
 .ten-pines-logo {
