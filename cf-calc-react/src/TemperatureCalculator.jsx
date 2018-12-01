@@ -28,12 +28,8 @@ export class TemperatureCalculator extends React.Component {
     return ( celsius * 9 / 5 ) + 32;
   };
 
-  handleCelsiusChange = (temperature) => {
-    this.setState({ temperature, scale: 'c' });
-  };
-
-  handleFahrenheitChange = (temperature) => {
-    this.setState({ temperature, scale: 'f' });
+  handleTemperatureChange = (temperature, scale) => {
+    this.setState({ temperature, scale: scale });
   };
 
   render() {
@@ -49,12 +45,12 @@ export class TemperatureCalculator extends React.Component {
           <TemperatureInput
             scale="c"
             temperature={ celsius }
-            onTemperatureChange={ this.handleCelsiusChange }/>
+            onTemperatureChange={ this.handleTemperatureChange }/>
           <img src={ arrows } className={ `arrows` } alt="arrows"/>
           <TemperatureInput
             scale="f"
             temperature={ fahrenheit }
-            onTemperatureChange={ this.handleFahrenheitChange }/>
+            onTemperatureChange={ this.handleTemperatureChange }/>
         </div>
       </div>
     );
