@@ -11,6 +11,7 @@ export default Component.extend({
       let currentTemperature = this.get('currentTemperature');
       return this.get('currentScale') === 'f' ? this.tryConvert(currentTemperature, this.toCelsius) : currentTemperature;
     },
+    
     set(key, temperature) {
       this.set('currentScale', 'c');
       this.set('currentTemperature', temperature);
