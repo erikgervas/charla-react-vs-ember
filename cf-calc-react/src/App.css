@@ -20,6 +20,10 @@
     height: 10vh;
 }
 
+.temperature-input {
+    font-size: 2vh;
+}
+
 .title {
     display: flex;
     justify-content: center;

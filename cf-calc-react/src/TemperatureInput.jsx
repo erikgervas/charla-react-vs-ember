@@ -11,7 +11,8 @@ export const TemperatureInput = (props) => {
     <fieldset className={`input-box`}>
       <legend>Enter temperature in { scaleNames[ props.scale ] }:</legend>
       <input value={ props.temperature }
-             onChange={ (e) => props.onTemperatureChange(e.target.value) }/>
+             onChange={ (e) => props.onTemperatureChange(e.target.value) }
+             className={ `temperature-input` }/>
     </fieldset>
   )
 };

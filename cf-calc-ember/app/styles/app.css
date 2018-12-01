@@ -20,6 +20,10 @@
   font-size: 120%;
 }
 
+.temperature-input {
+  font-size: 2vh;
+}
+
 .title {
   display: flex;
   justify-content: center;
