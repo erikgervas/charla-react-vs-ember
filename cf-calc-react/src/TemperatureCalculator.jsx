@@ -43,12 +43,12 @@ export class TemperatureCalculator extends React.Component {
         <h1 className={ `title` }>Temperature Calculator</h1>
         <div className={ `calculator` }>
           <TemperatureInput
-            scale="c"
+            scale='c'
             temperature={ celsius }
             onTemperatureChange={ this.handleTemperatureChange }/>
           <img src={ arrows } className={ `arrows` } alt="arrows"/>
           <TemperatureInput
-            scale="f"
+            scale='f'
             temperature={ fahrenheit }
             onTemperatureChange={ this.handleTemperatureChange }/>
         </div>
