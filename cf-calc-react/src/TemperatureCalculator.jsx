@@ -44,7 +44,7 @@ export class TemperatureCalculator extends React.Component {
 
     return (
       <div>
-        <h1 className={`title`}>Temperature Calculator</h1>
+        <h1 className={ `title` }>Temperature Calculator</h1>
         <div className={ `calculator` }>
           <TemperatureInput
             scale="c"
