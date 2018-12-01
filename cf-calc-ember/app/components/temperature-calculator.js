@@ -6,28 +6,28 @@ export default Component.extend({
   currentTemperature: '',
   currentScale: 'c',
 
-  celsius: computed('currentScale', 'currentTemperature', function () {
-    let currentTemperature = this.get("currentTemperature");
-    return this.get("currentScale") === 'f' ? this.tryConvert(currentTemperature, this.toCelsius) : currentTemperature;
-  }),
-
-  fahrenheit: computed('currentScale', 'currentTemperature', function () {
-    let currentTemperature = this.get("currentTemperature");
-    return this.get("currentScale") === 'c' ? this.tryConvert(currentTemperature, this.toFahrenheit) : currentTemperature;
-  }),
-
-  actions: {
-
-    handleCelsiusChange(temperature) {
-      this.set('currentTemperature', temperature);
+  celsius: computed('currentTemperature', {
+    get() {
+      let currentTemperature = this.get('currentTemperature');
+      return this.get('currentScale') === 'f' ? this.tryConvert(currentTemperature, this.toCelsius) : currentTemperature;
+    },
+    set(key, temperature) {
       this.set('currentScale', 'c');
+      this.set('currentTemperature', temperature);
+    }
+  }),
+
+  fahrenheit: computed('currentTemperature', {
+    get() {
+      let currentTemperature = this.get('currentTemperature');
+      return this.get('currentScale') === 'c' ? this.tryConvert(currentTemperature, this.toFahrenheit) : currentTemperature;
     },
 
-    handleFahrenheitChange(temperature) {
-      this.set('currentTemperature', temperature);
+    set(key, temperature) {
       this.set('currentScale', 'f');
-    },
-  },
+      this.set('currentTemperature', temperature);
+    }
+  }),
 
   tryConvert(temperature, converter) {
     const input = parseFloat(temperature);
