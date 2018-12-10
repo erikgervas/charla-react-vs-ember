@@ -13,8 +13,7 @@ export default Component.extend({
     },
     
     set(key, temperature) {
-      this.set('currentScale', 'c');
-      this.set('currentTemperature', temperature);
+      ths.setTemperature(temperature, 'c');
     }
   }),
 
@@ -25,10 +24,14 @@ export default Component.extend({
     },
 
     set(key, temperature) {
-      this.set('currentScale', 'f');
-      this.set('currentTemperature', temperature);
+      ths.setTemperature(temperature, 'f');
     }
   }),
+
+  setTemperature(temperature, scale) {
+    this.set('currentScale', scale);
+    this.set('currentTemperature', temperature);
+  },
 
   tryConvert(temperature, converter) {
     const input = parseFloat(temperature);
