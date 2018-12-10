@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Fragment } from "react"
 import { TemperatureInput } from "./TemperatureInput";
 import arrows from "./bidirectional-arrows-black-fat.png"
 import "./App.css"
@@ -39,7 +39,7 @@ export class TemperatureCalculator extends React.Component {
     const fahrenheit = scale === 'c' ? this.tryConvert(temperature, this.toFahrenheit) : temperature;
 
     return (
-      <div>
+      <Fragment>
         <h1 className={ `title` }>Temperature Calculator</h1>
         <div className={ `calculator` }>
           <TemperatureInput
@@ -52,7 +52,7 @@ export class TemperatureCalculator extends React.Component {
             temperature={ fahrenheit }
             onTemperatureChange={ this.handleTemperatureChange }/>
         </div>
-      </div>
+      </Fragment>
     );
   }
 }
