@@ -13,7 +13,7 @@ export default Component.extend({
     },
     
     set(key, temperature) {
-      ths.setTemperature(temperature, 'c');
+      this.setTemperature(temperature, 'c');
     }
   }),
 
@@ -24,7 +24,7 @@ export default Component.extend({
     },
 
     set(key, temperature) {
-      ths.setTemperature(temperature, 'f');
+      this.setTemperature(temperature, 'f');
     }
   }),
 
